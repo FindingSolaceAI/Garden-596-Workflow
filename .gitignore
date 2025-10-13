@@ -205,3 +205,24 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# --- RIVR Archive custom rules ---
+
+# Notion exports (keep folder, ignore contents)
+notion_exports/*
+!notion_exports/README.md
+
+# Logs and private notes
+*/logs/*
+*/notes/private/*
+personal_*/
+
+# Temporary or backup files
+*.log
+*.tmp
+*.bak
+*.old
+
+# Archive test branch (keep placeholder readme only)
+garden_597/*
+!garden_597/README.md
