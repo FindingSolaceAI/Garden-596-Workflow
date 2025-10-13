@@ -1,0 +1,18 @@
+{
+  "title": "Cyal Cave Ritual",
+  "author": { "name": "Shayna", "role": "World Architect" },
+  "world": "solace_chatgpt",
+  "type": "story",
+  "created": "2025-10-13T08:00:00Z",
+  "updated": "2025-10-13T08:30:00Z",
+  "permissions": {
+    "visibility": "shared",
+    "owner": "Shayna",
+    "access_keys": ["key_solace_001"]
+  },
+  "metadata": {
+    "tags": ["Cyal", "Midnight People", "Prophecy"],
+    "summary": "Cyal paints a prophetic vision beneath the Mother Tree using pigments that shimmer with ancestral memory."
+  },
+  "content_ref": "solace_chatgpt/stories/cyal-cave-ritual.txt"
+}
