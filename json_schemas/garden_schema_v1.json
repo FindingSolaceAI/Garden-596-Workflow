@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "garden_schema_v1.json",
+  "title": "RIVR Garden Metadata Schema v1",
+  "description": "Defines a unified format for lore, scripts, and AI collaboration records.",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Readable name of the entry (story, thread, artifact, or script)."
+    },
+    "author": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "collaborators": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["name"]
+    },
+    "world": {
+      "type": "string",
+      "description": "Which world, branch, or project this belongs to (e.g., Solace ChatGPT, River Claude, Olde Town)."
+    },
+    "type": {
+      "type": "string",
+      "enum": ["story", "script", "schema", "lore", "note", "misc"],
+      "description": "Used to route into the correct folder tree."
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Creation timestamp."
+    },
+    "updated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last modification timestamp."
+    },
+    "permissions": {
+      "type": "object",
+      "properties": {
+        "visibility": { "type": "string", "enum": ["private", "shared", "public"] },
+        "owner": { "type": "string" },
+        "access_keys": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "notion_url": { "type": "string" },
+        "github_url": { "type": "string" },
+        "media": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "summary": { "type": "string" },
+        "parent_branch": { "type": "string" }
+      }
+    },
+    "content_ref": {
+      "type": "string",
+      "description": "Reference path to the associated text, image, or code file."
+    }
+  },
+  "required": ["title", "author", "world", "type"]
+}
