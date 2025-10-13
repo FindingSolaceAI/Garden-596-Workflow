@@ -206,6 +206,28 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
+# --- Python defaults ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Python build / dist artefacts
+build/
+dist/
+*.egg-info/
+
 # --- RIVR Archive custom rules ---
 
 # Notion exports (keep folder, ignore contents)
@@ -216,12 +238,24 @@ notion_exports/*
 */logs/*
 */notes/private/*
 personal_*/
+draft_*/
 
 # Temporary or backup files
 *.log
 *.tmp
 *.bak
 *.old
+
+# Backups & archives
+*.zip
+*.tar
+*.gz
+
+# Sensitive credentials (just in case)
+*.key
+*.pem
+*.env
+secrets.json
 
 # Archive test branch (keep placeholder readme only)
 garden_597/*
