@@ -1,2 +1,2 @@
-# RIVR-archive
-Collaborative archive and creative framework for the RIVR Garden — where story, code, and structure merge into a living knowledge ecosystem.
+# 🌿 Garden-596 Workflow
+Public build of the 596 Garden — part of the RIVR Archive ecosystem.
